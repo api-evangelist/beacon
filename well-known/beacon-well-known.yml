@@ -1,0 +1,69 @@
+generated: '2026-07-20'
+method: searched
+source: live HTTP probes of beacon.bio and app.beacon.bio
+notes: >-
+  No /.well-known/ resources are published on any Beacon Biosignals host. beacon.bio returns a hard 404
+  for every probed path. app.beacon.bio (the SleepView portal) is a single-page application that returns
+  HTTP 200 with `content-type: text/html` for EVERY path, including paths that cannot exist — those 200s
+  are an SPA catch-all, NOT published artifacts, and are recorded here as `spa_catchall` so a later run
+  does not mistake them for real hits. No security.txt, no OpenID configuration, no api-catalog.
+hosts:
+- host: beacon.bio
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
+  - path: /robots.txt
+    status: 200
+    file: null
+    note: present but not a well-known API artifact
+- host: app.beacon.bio
+  spa_catchall: true
+  catchall_evidence: 'GET /this-path-does-not-exist-xyz123 returned 200 text/html with the same SPA shell'
+  paths:
+  - path: /.well-known/security.txt
+    status: 200
+    verified: false
+    file: null
+    note: SPA catch-all HTML, not a security.txt
+  - path: /.well-known/openid-configuration
+    status: 200
+    verified: false
+    file: null
+    note: SPA catch-all HTML, not an OpenID configuration document
+  - path: /openapi.json
+    status: 200
+    verified: false
+    file: null
+    note: SPA catch-all HTML, not an OpenAPI document
+subdomains_probed:
+- host: api.beacon.bio
+  status: 0
+  note: does not resolve
+- host: developer.beacon.bio
+  status: 0
+  note: does not resolve
+- host: trust.beacon.bio
+  status: 0
+  note: does not resolve
+- host: status.beacon.bio
+  status: 403
+  note: resolves but forbidden; no public status page content
+- host: docs.beacon.bio
+  status: 302
+  note: redirects to GitHub Pages authentication; private GitHub Pages site, not public API documentation

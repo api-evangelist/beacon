@@ -1,0 +1,229 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/beacon-biosignals + https://github.com/JuliaRegistries/General + https://beacon.bio/open-source-software
+notes: >-
+  Beacon Biosignals publishes no REST API and therefore no conventional REST client SDKs. Its public
+  package surface is a first-party Julia ecosystem: every package below is registered in the Julia
+  General registry with a `repo` pointing at github.com/beacon-biosignals, which is how first-party
+  ownership was verified (no self-attestation was taken on trust). Packages with no `version` have no
+  published GitHub release; they are registered but release-tagged only in the registry.
+  No Beacon packages were found on npm, PyPI, Maven Central, NuGet, RubyGems, Packagist or crates.io.
+registries_checked:
+- registry: julia-general
+  url: https://github.com/JuliaRegistries/General
+  result: 24 first-party packages found
+- registry: npm
+  result: none found
+- registry: pypi
+  result: none found
+- registry: maven-central
+  result: none found
+- registry: nuget
+  result: none found
+- registry: rubygems
+  result: none found
+- registry: packagist
+  result: none found
+- registry: crates.io
+  result: none found
+packages:
+- language: julia
+  registry: julia-general
+  name: Onda
+  version: v0.15.11
+  url: https://github.com/beacon-biosignals/Onda.jl
+  docs: https://beacon-biosignals.github.io/Onda.jl/dev/
+  install: 'julia> ] add Onda'
+  official: true
+  description: High-throughput manipulation of structured signal data across arbitrary domain-specific
+    encodings, file formats and storage layers. Defines the Onda format (an Apache Arrow based format
+    for multi-sensor, multi-channel, LPCM-encodable, annotated time-series recordings).
+- language: julia
+  registry: julia-general
+  name: Legolas
+  version: v0.5.24
+  url: https://github.com/beacon-biosignals/Legolas.jl
+  install: 'julia> ] add Legolas'
+  official: true
+  description: Tables.jl-friendly mechanisms for constructing, reading, writing and validating Arrow
+    tables against extensible, versioned, user-specified schemas.
+- language: julia
+  registry: julia-general
+  name: EDF
+  version: v0.8.1
+  url: https://github.com/beacon-biosignals/EDF.jl
+  install: 'julia> ] add EDF'
+  official: true
+  license: MIT
+  description: Read and write European Data Format (EDF/EDF+) and BioSemi Data Format (BDF) files.
+- language: julia
+  registry: julia-general
+  name: Lighthouse
+  version: v0.17.3
+  url: https://github.com/beacon-biosignals/Lighthouse.jl
+  install: 'julia> ] add Lighthouse'
+  official: true
+  license: MIT
+  description: Performance evaluation tools for multiclass, multirater classification models.
+- language: julia
+  registry: julia-general
+  name: TimeSpans
+  version: v1.2.0
+  url: https://github.com/beacon-biosignals/TimeSpans.jl
+  install: 'julia> ] add TimeSpans'
+  official: true
+  description: Provides a `TimeSpan` type for representing a continuous span between two points in time.
+- language: julia
+  registry: julia-general
+  name: Effects
+  version: v1.7.1
+  url: https://github.com/beacon-biosignals/Effects.jl
+  install: 'julia> ] add Effects'
+  official: true
+  license: MIT
+  description: Effects prediction for linear and generalized linear regression models.
+- language: julia
+  registry: julia-general
+  name: KeywordSearch
+  version: v0.5.0
+  url: https://github.com/beacon-biosignals/KeywordSearch.jl
+  install: 'julia> ] add KeywordSearch'
+  official: true
+  license: MIT
+  description: Fuzzy keyword search across collections of documents.
+- language: julia
+  registry: julia-general
+  name: PyMNE
+  version: v0.2.4
+  url: https://github.com/beacon-biosignals/PyMNE.jl
+  install: 'julia> ] add PyMNE'
+  official: true
+  license: MIT
+  description: Julia interface to MNE-Python via PythonCall.
+- language: julia
+  registry: julia-general
+  name: AlignedSpans
+  version: v0.2.9
+  url: https://github.com/beacon-biosignals/AlignedSpans.jl
+  install: 'julia> ] add AlignedSpans'
+  official: true
+  license: MIT
+  description: Helpers for continuous to discrete indexing of time spans.
+- language: julia
+  registry: julia-general
+  name: StableHashTraits
+  version: v2.0.3
+  url: https://github.com/beacon-biosignals/StableHashTraits.jl
+  install: 'julia> ] add StableHashTraits'
+  official: true
+  license: MIT
+  description: Compute hashes over any Julia object simply and reproducibly.
+- language: julia
+  registry: julia-general
+  name: K8sClusterManagers
+  version: v0.1.5
+  url: https://github.com/beacon-biosignals/K8sClusterManagers.jl
+  install: 'julia> ] add K8sClusterManagers'
+  official: true
+  description: A Julia cluster manager for Kubernetes.
+- language: julia
+  registry: julia-general
+  name: StandardizedPredictors
+  version: v1.0.1
+  url: https://github.com/beacon-biosignals/StandardizedPredictors.jl
+  install: 'julia> ] add StandardizedPredictors'
+  official: true
+  license: MIT
+  description: Standardized regression predictors for use with StatsModels.jl (centered, z-scored, etc.).
+- language: julia
+  registry: julia-general
+  name: OndaEDF
+  version: v0.14.0
+  url: https://github.com/beacon-biosignals/OndaEDF.jl
+  install: 'julia> ] add OndaEDF'
+  official: true
+  description: Utilities for importing/exporting EDF files to and from Onda datasets.
+- language: julia
+  registry: julia-general
+  name: DataFrameIntervals
+  version: v0.2.0
+  url: https://github.com/beacon-biosignals/DataFrameIntervals.jl
+  install: 'julia> ] add DataFrameIntervals'
+  official: true
+  license: MIT
+  description: Utilities for working with DataFrames of Intervals.jl or TimeSpans.jl objects.
+- language: julia
+  registry: julia-general
+  name: TransformSpecifications
+  version: v0.5.1
+  url: https://github.com/beacon-biosignals/TransformSpecifications.jl
+  install: 'julia> ] add TransformSpecifications'
+  official: true
+  license: MIT
+  description: Structured processing elements with I/O specifications.
+- language: julia
+  registry: julia-general
+  name: LegolasFlux
+  version: v0.2.3
+  url: https://github.com/beacon-biosignals/LegolasFlux.jl
+  install: 'julia> ] add LegolasFlux'
+  official: true
+  license: MIT
+  description: Save Flux model weights in Legolas-powered Arrow tables.
+- language: julia
+  registry: julia-general
+  name: OndaBatches
+  version: v0.4.9
+  url: https://github.com/beacon-biosignals/OndaBatches.jl
+  install: 'julia> ] add OndaBatches'
+  official: true
+  license: MIT
+  description: Local and distributed batch loading for Onda datasets.
+- language: julia
+  registry: julia-general
+  name: MockTableGenerators
+  url: https://github.com/beacon-biosignals/MockTableGenerators.jl
+  install: 'julia> ] add MockTableGenerators'
+  official: true
+  description: Generate realistic mock datasets as dependent Tables.jl tables.
+- language: julia
+  registry: julia-general
+  name: SerializationCaches
+  url: https://github.com/beacon-biosignals/SerializationCaches.jl
+  install: 'julia> ] add SerializationCaches'
+  official: true
+- language: julia
+  registry: julia-general
+  name: WeakKeyIdDicts
+  url: https://github.com/beacon-biosignals/WeakKeyIdDicts.jl
+  install: 'julia> ] add WeakKeyIdDicts'
+  official: true
+  description: Julia hash table where the keys are weak references to objects by identity.
+- language: julia
+  registry: julia-general
+  name: K8sDeputy
+  url: https://github.com/beacon-biosignals/K8sDeputy.jl
+  install: 'julia> ] add K8sDeputy'
+  official: true
+  description: Kubernetes health checks and graceful termination support on behalf of a Julia process.
+- language: julia
+  registry: julia-general
+  name: MultiwayNumberPartitioning
+  url: https://github.com/beacon-biosignals/MultiwayNumberPartitioning.jl
+  install: 'julia> ] add MultiwayNumberPartitioning'
+  official: true
+  description: Solving the multiway number partitioning problem exactly.
+- language: julia
+  registry: julia-general
+  name: PyFOOOF
+  url: https://github.com/beacon-biosignals/PyFOOOF.jl
+  install: 'julia> ] add PyFOOOF'
+  official: true
+  description: Julia interface to FOOOF (fitting oscillations and one-over-f).
+- language: julia
+  registry: julia-general
+  name: LighthouseFlux
+  url: https://github.com/beacon-biosignals/LighthouseFlux.jl
+  install: 'julia> ] add LighthouseFlux'
+  official: true
+  description: An adapter package implementing Lighthouse's framework interface for Flux models.

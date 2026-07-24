@@ -1,8 +1,28 @@
 aid: beacon
-name: Beacon
-description: 'Beacon is a company surfaced as a portfolio company of general-catalyst and added to the
-  API Evangelist network as a stub for enrichment. Sector: healthcare. This profile is a lead awaiting
-  the enrichment pipeline.'
+name: Beacon Biosignals
+description: 'Beacon Biosignals is a neurotechnology company applying machine learning to EEG
+  (electroencephalography) to advance precision medicine for conditions affecting the brain. Founded in
+  2019 by Jacob Donoghue (MD, PhD) and Jarrett Revels, the company operates two lines of business: a
+  life-sciences platform that collects, integrates and analyzes EEG across drug development and clinical
+  trials (over 2 million hours of EEG processed across 40+ trials), and a home sleep testing business
+  built on the SleepView Monitor and SleepView Direct platforms (500,000+ home sleep tests completed).
+  Beacon acquired CleveMed in April 2025, and its Dreem 3S was authorized by the FDA in December 2024 as
+  the first sleep wearable cleared with a predetermined change control plan. Beacon publishes no public
+  REST API or developer portal; its public technical surface is a substantial open-source Julia ecosystem
+  under the beacon-biosignals GitHub organization, including the Onda signal-data format, the Legolas
+  schema framework, EDF.jl and Lighthouse.jl. Backed by General Catalyst, GV, Takeda, S32 and Innoviva.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://framerusercontent.com/images/PgzIMmQ18JgIV7buJlevm9mT8cE.jpg
 url: https://raw.githubusercontent.com/api-evangelist/beacon/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +32,66 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Healthcare
+- Neurotechnology
+- EEG
+- Brain Health
+- Sleep Medicine
+- Clinical Trials
+- Machine Learning
+- Medical Devices
+- Open Source
+- Julia
 apis: []
+common:
+- type: DomainSecurity
+  url: security/beacon-domain-security.yml
+- type: Website
+  url: https://beacon.bio/
+- type: About
+  url: https://beacon.bio/about
+- type: Documentation
+  url: https://beacon-biosignals.github.io/Onda.jl/dev/
+- type: GitHubOrganization
+  url: https://github.com/beacon-biosignals
+- type: OpenSource
+  url: https://beacon.bio/open-source-software
+- type: Blog
+  url: https://beacon.bio/news
+- type: Support
+  url: https://beacon.bio/contact
+- type: Login
+  url: https://app.beacon.bio/
+- type: TermsOfService
+  url: https://beacon.bio/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://app.beacon.bio/privacy
+- type: Careers
+  url: https://beacon.bio/careers
+- type: Packages
+  url: packages/beacon-packages.yml
+- type: SDKs
+  url: packages/beacon-packages.yml
+- type: ChangeLog
+  url: changelog/beacon-changelog.yml
+- type: WellKnown
+  url: well-known/beacon-well-known.yml
+- type: LLMsTxt
+  url: llms/beacon-llms.txt
+- type: Conformance
+  url: conformance/beacon-conformance.yml
+- type: Compliance
+  url: conformance/beacon-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
